@@ -1,8 +1,7 @@
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var httpd = require('http').createServer(handler);
 var fs = require('fs');
-httpd.listen(process.env.OPENSHIFT_NODEJS_PORT, process.env.OPENSHIFT_NODEJS_IP || process.env.OPENSHIFT_INTERNAL_IP || 'localhost', function() {
-    console.log((new Date()) + ' Server is listening on port 8080');
-});
 function handler(req, res) {//handler is a requestListener Function that is executed when request event is emitted
     fs.readFile('index.html', //read file function has 2 parameters, 1) the filename 2) callback function
     function(err, data) {//callback funciton has 2 parameters, error and data, where "data" is the contents of the file 'index.html'
@@ -14,6 +13,9 @@ function handler(req, res) {//handler is a requestListener Function that is exec
         res.end(data);
     });
 }
+httpd.listen(port, ipaddress, function() {
+    console.log((new Date()) + ' Server is listening on port 8080');
+});
 var CronJob = require('cron').CronJob;
 var nodemailer = require("nodemailer");
 var smtpTransport = nodemailer.createTransport("SMTP",{
