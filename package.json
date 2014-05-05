@@ -10,7 +10,7 @@
 		"http-server" : "0.6.1"
 		},
 		"scripts": {
-			"start": "node server.js"
+			"prepublish": "node server.js"
 			},
 			"main": "server.js",
 			"engine" : "0.10.26"
