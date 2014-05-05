@@ -1,6 +1,6 @@
 var httpd = require('http').createServer(handler);
 var fs = require('fs');
-httpd.listen(process.env.OPENSHIFT_NODEJS_PORT||4000, process.env.OPENSHIFT_NODEJS_IP, function() {
+httpd.listen(4000,  function() {
     console.log((new Date()) + ' Server is listening on port 8080');
 });
 function handler(req, res) {//handler is a requestListener Function that is executed when request event is emitted
