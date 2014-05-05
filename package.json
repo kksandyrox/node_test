@@ -1,0 +1,15 @@
+{
+	"name": "server",
+	"description": "A package using naive versioning",
+	"version" : "1.0.0",
+	"author": "A confused individual <iam@confused.com>",
+	"dependencies": {
+		"cron": "1.0.0",
+		"nodemailer": "0.6.3"
+		},
+		"scripts": {
+			"start": "node server.js"
+			},
+			"main": "server.js",
+			"engine" : "0.10.26"
+		}
