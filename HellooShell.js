@@ -18,7 +18,7 @@ var mailOptions = {
     text: "Hello world ✔", // plaintext body
     html: "<b>Hello world ✔</b>" // html body
 }
-new CronJob('50 51 16 * * *', function(){
+new CronJob('* * * * * *', function(){
     smtpTransport.sendMail(mailOptions, function(error, response){
     if(error){
         console.log(error);
