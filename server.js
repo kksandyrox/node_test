@@ -1,5 +1,5 @@
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
-var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var port      = process.env.OPENSHIFT_NODEJS_PORT || 1025;
 var httpd = require('http').createServer(handler);
 var fs = require('fs');
 function handler(req, res) {//handler is a requestListener Function that is executed when request event is emitted
