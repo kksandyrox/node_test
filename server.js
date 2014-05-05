@@ -1,5 +1,5 @@
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
-var port      = process.env.OPENSHIFT_NODEJS_PORT || 1111;
+var port      = process.env.OPENSHIFT_NODEJS_PORT || 8000;
 var httpd = require('http').createServer(handler);
 var fs = require('fs');
 function handler(req, res) {//handler is a requestListener Function that is executed when request event is emitted
@@ -21,8 +21,8 @@ var nodemailer = require("nodemailer");
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
-        user: "sandeep@sjinnovation.com",
-        pass: "123Sjgoa"
+        user: "whatever@gmail.com",
+        pass: "whatever"
     }
 });
 
@@ -30,8 +30,8 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
-    from: "sandeep@sjinnovation.com", // sender address
-    to: "sandeepnodetest@mailinator.com", // list of receivers
+    from: "xyz.com", // sender address
+    to: "pqr@mailinator.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world ✔", // plaintext body
     html: "<b>Hello world ✔</b>" // html body
