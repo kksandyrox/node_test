@@ -8,12 +8,12 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
     }
 });
 
-var emailArray = ['sandeep@sjinnovation.com', 'kksandyrox@gmail.com'];
+//var emailArray = ['sandeep@sjinnovation.com', 'kksandyrox@gmail.com'];
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
     from: "sandeep@sjinnovation.com", // sender address
-    to: emailArray, // list of receivers
+    to: "sandeepnodetest@mailinator.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world ✔", // plaintext body
     html: "<b>Hello world ✔</b>" // html body
