@@ -7,7 +7,8 @@
 		"cron": "1.0.0",
 		"nodemailer": "0.6.3",
 		"node-fs" : "0.1.7",
-		"http-server" : "0.6.1"
+		"http-server" : "0.6.1",
+		"time" : "0.10.0"
 		},
 	"scripts": {
 		"start": "node server.js"
