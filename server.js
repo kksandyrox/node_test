@@ -13,46 +13,46 @@ function handler(req, res) {//handler is a requestListener Function that is exec
         res.end(data);
     });
 }
-httpd.listen(port, ipaddress, function() {
-    console.log((new Date()) + ' Server is listening on port 8080');
-});
-var CronJob = require('cron').CronJob;
-var nodemailer = require("nodemailer");
-var smtpTransport = nodemailer.createTransport("SMTP",{
-    service: "Gmail",
-    auth: {
-        user: "whatever@gmail.com",
-        pass: "whatever"
-    }
-});
+// httpd.listen(port, ipaddress, function() {
+//     console.log((new Date()) + ' Server is listening on port 8080');
+// });
+// var CronJob = require('cron').CronJob;
+// var nodemailer = require("nodemailer");
+// var smtpTransport = nodemailer.createTransport("SMTP",{
+//     service: "Gmail",
+//     auth: {
+//         user: "sandeep@sjinnovation.com",
+//         pass: "123Sjgoa"
+//     }
+// });
 
-//var emailArray = ['sandeep@sjinnovation.com', 'kksandyrox@gmail.com'];
+// //var emailArray = ['sandeep@sjinnovation.com', 'kksandyrox@gmail.com'];
 
-// setup e-mail data with unicode symbols
-var mailOptions = {
-    from: "xyz.com", // sender address
-    to: "pqr@mailinator.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world ✔", // plaintext body
-    html: "<b>Hello world ✔</b>" // html body
-}
-new CronJob('* * * * * *', function(){
-    smtpTransport.sendMail(mailOptions, function(error, response){
-    if(error){
-        console.log(error);
-    }else{
-        console.log("Email will be sent every second! SPAM SPAM SPAM");
-        console.log("");
-        console.log("Message sent: " + response.message);
-    }
+// // setup e-mail data with unicode symbols
+// var mailOptions = {
+//     from: "xyz.com", // sender address
+//     to: "sandeepnodetest@mailinator.com", // list of receivers
+//     subject: "Hello ✔", // Subject line
+//     text: "Hello world ✔", // plaintext body
+//     html: "<b>Hello world ✔</b>" // html body
+// }
+// new CronJob('* * * * * *', function(){
+//     smtpTransport.sendMail(mailOptions, function(error, response){
+//     if(error){
+//         console.log(error);
+//     }else{
+//         console.log("Email will be sent every second! SPAM SPAM SPAM");
+//         console.log("");
+//         console.log("Message sent: " + response.message);
+//     }
 
-    // if you don't want to use this transport object anymore, uncomment following line
-    //smtpTransport.close(); // shut down the connection pool, no more messages
-})
-}, null, true, "America/Los_Angeles");;
+//     // if you don't want to use this transport object anymore, uncomment following line
+//     //smtpTransport.close(); // shut down the connection pool, no more messages
+// })
+// }, null, true, "America/Los_Angeles");
 
 
-
+//THIS PART OF CODE IS PERMANENTLY COMMENTED
 
 // create reusable transport method (opens pool of SMTP connections)
 
